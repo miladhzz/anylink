@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Any Link {% endblock %}
+{% block content %}
+    {% if form.errors %}
+            <h1>ERRORRRRRR same email again???</h1>
+    {% endif %}
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save"/>
+	</form>
+	{{ link.completelink }}
+{% endblock %}

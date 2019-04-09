@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Any Link {% endblock %}
+{% block content %}
+    Your link:
+    <h4><a href="{{ link.completelink }}">{{ link.completelink }}</a></h4>
+    Any Link: <h2>http://anylink.ir/{{ link.slug }}</h2>
+    <a href="{% url 'create_link' %}">Return</a>
+{% endblock %}
