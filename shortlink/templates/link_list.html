@@ -6,7 +6,13 @@
         <div class="container">
             <div class="row">
                 {% for link in link_list %}
-                    {{link.id}}
+                <h4>
+                  Url: <a href="{{ link.completelink }}">{{ link.completelink }}</a>
+                </h4>  
+                <h4>
+                  AnyLink: {{link.slug}}
+                </h4>   
+                <hr />
                 {% endfor %}
             </div>
             
@@ -15,25 +21,27 @@
                     <div class="product-pagination text-center">
                         <nav>
                           {% if is_paginated %}
-                              <ul class="pagination">
-                                {% if page_obj.has_previous %}
-                                  <li><a href="?page={{ page_obj.previous_page_number }}">&raquo;</a></li>
+                              
+                                {% if link_list.has_previous %}
+                                  <a href="?page={{ link_list.previous_page_number }}">previous</a>
                                 {% else %}
-                                  <li class="disabled"><span>&raquo;</span></li>
+                                  <span>previous</span>
                                 {% endif %}
+                                
                                 {% for i in paginator.page_range %}
-                                  {% if page_obj.number == i %}
-                                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                                  {% if link_list.number == i %}
+                                   <span>{{ i }} <span class="sr-only">(current)</span></span></li>
                                   {% else %}
-                                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                                   <a href="?page={{ i }}">{{ i }}</a>
                                   {% endif %}
                                 {% endfor %}
-                                {% if page_obj.has_next %}
-                                  <li><a href="?page={{ page_obj.next_page_number }}">&laquo;</a></li>
+
+                                {% if link_list.has_next %}
+                                  <a href="?page={{ link_list.next_page_number }}">next</a>
                                 {% else %}
-                                  <li class="disabled"><span>&laquo;</span></li>
+                                   <span>next</span>
                                 {% endif %}
-                              </ul>
+                             
                             {% endif %}
                         </nav>                        
                     </div>

@@ -8,4 +8,5 @@ urlpatterns = [
                   path('', views.CreateLink.as_view(), name='create_link'),
                   path('detail/<slug:slug>', views.LinkDetail.as_view(), name='link_detail'),
                   path('<slug:slug>', views.Redirect.as_view(), name='redirect'),
+                  path('links/', views.LinkList.as_view(), name='links'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
