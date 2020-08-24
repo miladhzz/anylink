@@ -13,7 +13,7 @@ class LinkList(ListView):
     model = Link
     template_name = 'link_list.html'
     paginate_by = 50
-    queryset = Link.objects.all()
+    queryset = Link.objects.all().order_by('-id')
 
 
 class CreateLink(CreateView):

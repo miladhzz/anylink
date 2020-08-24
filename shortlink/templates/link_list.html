@@ -6,6 +6,7 @@
         <div class="container">
             <div class="row">
                 {% for link in link_list %}
+                {{ link.create_date }}
                 <h4>
                   Url: <a href="{{ link.completelink }}">{{ link.completelink }}</a>
                 </h4>  
