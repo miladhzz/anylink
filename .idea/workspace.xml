@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f725924f-34b3-41a6-9f27-f18f671ce17e" name="Default Changelist" comment="update git ignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f725924f-34b3-41a6-9f27-f18f671ce17e" name="Default Changelist" comment="update git ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,6 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554741781929</updated>
       <workItem from="1661173614227" duration="126000" />
+      <workItem from="1661173770101" duration="384000" />
     </task>
     <task id="LOCAL-00001" summary="update git ignore">
       <created>1661173191358</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661173731099</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update git ignore">
+      <created>1661174154583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661174154583</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
