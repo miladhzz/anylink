@@ -76,15 +76,8 @@ WSGI_APPLICATION = 'anylink.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'anylink',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        #'PORT': '3306',
-        'OPTIONS': {
-            'charset': 'utf8',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlitedb',
     }
 }
 
