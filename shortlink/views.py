@@ -21,14 +21,6 @@ class CreateLink(CreateView):
     fields = ['completelink']
     template_name = 'add_link.html'
 
-    def form_valid(self, form):
-        rand = random.randint(100, 999999999)
-        if Link.objects.filter(slug=short_url.encode_url(rand)).exists():
-            raise ValidationError('A Short Link with this value already exists.')
-        self.object = form.save(commit=False)
-        self.object.slug = short_url.encode_url(rand)
-        return super(CreateLink, self).form_valid(form)
-
     def get_success_url(self):
         return reverse('link_detail', args=(self.object.slug,))
 
