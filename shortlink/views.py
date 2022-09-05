@@ -6,6 +6,8 @@ from .models import Link
 from django.urls import reverse
 from django.core.exceptions import ValidationError
 from django.shortcuts import get_object_or_404
+from rest_framework import generics
+from .serializers import LinkSerializer
 
 
 # Create your views here.
@@ -35,3 +37,13 @@ class Redirect(RedirectView):
     def get(self, request, *args, **kwargs):
         self.url = get_object_or_404(Link, slug=kwargs['slug']).completelink
         return super(Redirect, self).get(request, *args, **kwargs)
+
+
+class ListLinkApi(generics.ListAPIView):
+    queryset = Link.objects.all()
+    serializer_class = LinkSerializer
+
+
+class DetailLinkApi(generics.RetrieveAPIView):
+    queryset = Link.objects.all()
+    serializer_class = LinkSerializer
